@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TestSuite" parallel="tests" thread-count="2">
+<listeners>
+<listener class-name="com.pmaf.listeners.PMReport"/>
+</listeners>
+<test name="LTCHistoryLogin" parallel="methods" thread-count="10">
+<parameter name="testDataFile" value="testData/testData.xlsx"/>
+<parameter name="hubURL" value="http://p190457l:4444/wd/hub"/>
+<parameter name="browser" value="Chrome"/>
+<classes>
+<class name="com.pmaf.historyltc.History_LTC"/>
+</classes>
+</test>
+</suite>
+
